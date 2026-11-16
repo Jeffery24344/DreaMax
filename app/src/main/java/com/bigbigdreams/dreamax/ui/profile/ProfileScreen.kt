@@ -13,7 +13,13 @@ import com.bigbigdreams.dreamax.ui.theme.DreamaxWhite
 
 @Composable
 fun ProfileScreen(navController: NavController) {
-    Box(Modifier = Modifier.fillMaxSize().background(DreamaxBlack), contentAlignment = Alignment.Center) {
-        Text("Profile", color = DreamaxWhite)
-    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DreamaxBlack),
+        contentAlignment = Alignment.Center,
+        content = {
+            Text(text = "Profile", color = DreamaxWhite)
+        }
+    )
 }

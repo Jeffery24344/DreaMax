@@ -13,7 +13,13 @@ import com.bigbigdreams.dreamax.ui.theme.DreamaxWhite
 
 @Composable
 fun GameDetailsScreen(navController: NavController, gameId: String) {
-    Box(Modifier = Modifier.fillMaxSize().background(DreamaxBlack), contentAlignment = Alignment.Center) {
-        Text("Game: $gameId", color = DreamaxWhite)
-    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DreamaxBlack),
+        contentAlignment = Alignment.Center,
+        content = {
+            Text(text = "Game: $gameId", color = DreamaxWhite)
+        }
+    )
 }

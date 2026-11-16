@@ -11,11 +11,3 @@ sealed class Screen(val route: String) {
         fun createRoute(gameId: String) = "game_details/$gameId"
     }
 }
-
-val bottomNavItems = listOf(
-    Screen.Home,
-    Screen.Store,
-    Screen.Downloads,
-    Screen.MyGames,
-    Screen.Profile
-)

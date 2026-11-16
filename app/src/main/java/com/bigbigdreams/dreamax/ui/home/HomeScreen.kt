@@ -13,7 +13,13 @@ import com.bigbigdreams.dreamax.ui.theme.DreamaxWhite
 
 @Composable
 fun HomeScreen(navController: NavController) {
-    Box(Modifier = Modifier.fillMaxSize().background(DreamaxBlack), contentAlignment = Alignment.Center) {
-        Text("Home", color = DreamaxWhite)
-    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DreamaxBlack),
+        contentAlignment = Alignment.Center,
+        content = {
+            Text(text = "Home", color = DreamaxWhite)
+        }
+    )
 }
