@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -36,19 +37,24 @@ fun HomeScreen(navController: NavController) {
             .fillMaxSize()
             .background(DreamaxBlack)
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 20.dp, vertical = 24.dp),
+            .padding(horizontal = 20.dp)
+            .padding(top = 16.dp, bottom = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.height(24.dp))
-        DreamaxLogo(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp))
-        Spacer(modifier = Modifier.height(12.dp))
+        DreamaxLogo(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(max = 160.dp)
+                .padding(horizontal = 24.dp)
+        )
+        Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = stringResource(R.string.brand_slogan),
             color = DreamaxLightGrey,
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodySmall,
             textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(28.dp))
         Text(
             text = "Welcome to DreaMax",
             color = DreamaxWhite,
@@ -57,24 +63,17 @@ fun HomeScreen(navController: NavController) {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Your independent game library and APK store.\nImport APKs, install with the system installer, and keep everything organized.",
+            text = "Import APKs, install with the system installer, and keep your library organized.",
             color = DreamaxLightGrey,
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(28.dp))
-        HomeActionButton("Open Store") {
-            navController.navigate(Screen.Store.route)
-        }
-        Spacer(modifier = Modifier.height(12.dp))
-        HomeActionButton("My Games") {
-            navController.navigate(Screen.MyGames.route)
-        }
-        Spacer(modifier = Modifier.height(12.dp))
-        HomeActionButton("Downloads") {
-            navController.navigate(Screen.Downloads.route)
-        }
-        Spacer(modifier = Modifier.height(40.dp))
+        Spacer(modifier = Modifier.height(24.dp))
+        HomeActionButton("Open Store") { navController.navigate(Screen.Store.route) }
+        Spacer(modifier = Modifier.height(10.dp))
+        HomeActionButton("My Games") { navController.navigate(Screen.MyGames.route) }
+        Spacer(modifier = Modifier.height(10.dp))
+        HomeActionButton("Downloads") { navController.navigate(Screen.Downloads.route) }
     }
 }
 
