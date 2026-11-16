@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DreaMax" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/dreamax_black</item>
+        <item name="android:navigationBarColor">@color/dreamax_black</item>
+        <item name="android:windowBackground">@color/dreamax_black</item>
+        <item name="android:colorPrimary">@color/dreamax_red</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Theme.DreaMax.Splash" parent="Theme.DreaMax">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+</resources>

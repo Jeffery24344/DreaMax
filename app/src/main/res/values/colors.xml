@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dreamax_red">#E53935</color>
+    <color name="dreamax_red_dark">#B71C1C</color>
+    <color name="dreamax_red_light">#EF5350</color>
+    <color name="dreamax_white">#FFFFFF</color>
+    <color name="dreamax_black">#0A0A0A</color>
+    <color name="dreamax_dark_grey">#1C1C1E</color>
+    <color name="dreamax_medium_grey">#2C2C2E</color>
+    <color name="dreamax_light_grey">#8E8E93</color>
+    <color name="dreamax_surface">#121212</color>
+    <color name="dreamax_on_surface">#FFFFFF</color>
+    <color name="dreamax_on_surface_variant">#B0B0B0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
