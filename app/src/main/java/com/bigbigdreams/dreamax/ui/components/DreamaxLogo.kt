@@ -14,7 +14,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 
 /**
- * Official DreaMax logo — loads from assets/logo_dreamax.b64
+ * Official DreaMax logo (Powered by Big Big Dreams).
+ * Loaded from split assets logo_dreamax_0..3.b64
  */
 @Composable
 fun DreamaxLogo(
@@ -25,7 +26,9 @@ fun DreamaxLogo(
     val context = LocalContext.current
     val bitmap = remember {
         runCatching {
-            val b64 = context.assets.open("logo_dreamax.b64").bufferedReader().readText()
+            val b64 = (0..3).joinToString("") { i ->
+                context.assets.open("logo_dreamax_$i.b64").bufferedReader().readText().trim()
+            }
             val bytes = Base64.decode(b64, Base64.DEFAULT)
             BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
         }.getOrNull()
